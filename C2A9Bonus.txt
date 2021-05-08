@@ -1,0 +1,59 @@
+But final: Créer un jeu vidéo textuel avec intéraction avec l'utilisateur. Vous aurez 1 journée entière pour le coder.
+
+https://docs.python.org/3/library/random.html
+
+C'est un jeu, chaque partie devra être différentes soit à cause du choix de l'utilisateur soit à cause de l'imprédictabilité de l'ordinateur (c'est ce qui fait le sel d'un jeu, si on sait tout prévoir, ou qu'il n'y a que de l'aléatoire, un jeu n'est bien souvent pas très intéressant.). Voici la doc pour rajouter de l'aléatoire à vos programmes
+Etape 1 :
+
+Définir les règles, l'univers et ce qu'il va s'y passer dans les grandes ligne. Quelles seront l'interraction avec l'utilisateur, comment on gagne comment on perd, quel sont les choix possible pour le joueur.
+
+- Pendant cette étape je ne connais plus le python, je ne vous aiderai qu'en tant que Game Designer pour que votre jeu soit jouable et réalisable en 1 jour, pas trop court mais pas trop long.
+
+Etape 2 :
+
+De quoi aurez vous besoin techniquement (qui fait quoi, quelles fonctions, quelles connaissances vous aurez besoin en plus par rapport au fonctionnement du programme), organisation,... Toujours pas de code ici.
+
+- Je ne serai que consultant ici si vous avez des questions sur comment on fait telle chose, si vous avez les compétences, pour donner de la doc python,...
+
+Etape 3 :
+
+Coder. 
+
+Je serai là pour toutes vos questions, j'essaierai d'avoir Johnny aussi pour vraiment être bien présent avec vous tout du long.
+
+Bruno - Jessie - Maxime
+
+Isaac - Alain - Mahsum - Eleonore 
+
+Bibli Time
+
+Etape 1
+Covid.(Donjon magique)
+Le joueur est piégé d'un donjon, il doit en réussir a s'en échapper.
+Le jeu s'arrete si le joueur n'arriv pas a en sortir ouqu'il meurt ou si le temps imparti n'est pas respecté.
+
+le joueur doit prendre des décisions sur le chemin qu'i veut prendre:
+
+-si il va tout droit (z) il tombe sur une épreuve, ex: une personne infecté, il doit se battre et gagner pour continuer son chemin.
+	Epreuve combat (0)
+		joueur: 1. protégé=masque
+				2. attaquer=vaccin
+				3. rechargé=recharger la seringue
+		méchant: aléatoire
+				protégé=recul
+				attaque=souffle le Covid
+				recharge= inspire
+
+
+-si il va a gauche (q) il doit répondre a une enigme, si ll ne répond pas assez vite il meurt (de toute facon ce chemin est un cul de sac et il devra faire demi tour pour choisir soit tout droit soit droite):
+	trouver le bon chiffre en 5 tests, a chaque test on précise l'interval entre le chiffre donné par le jour et le nombre de l'ordinateur.
+
+	Si il réussis a trouver le nombre, il gagne du temps pour sortir du donjon 
+	Si il ne trouve pas le chiffre, il perd du temps poru sortir du donjon
+
+-si il va a droite (d) il sort sans souvis.
+	s'orienté dans le labyrinthe avec les touches (q=gauche, d=droite, z=en avant, s=reculer)
+	ex de chemin, gauche=>droite=>tout droit
+
+-la touche (s) lui permet de sortir au début du jeu si il a trop peur.
+
