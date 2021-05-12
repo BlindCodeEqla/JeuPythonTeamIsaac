@@ -9,11 +9,11 @@ for valeur in tableau:
 
 # Opération sur un tableau  
 tableau = [1,3,5,7,11,13,17,19,23]
-print("Taille du tableau:" + str(len(tableau)) )
+print("Taille du tableau:" + str(len(tableau)) )                    # taille du tableau 
 
 tableau = [0,5,5,10,10,10,15,20]
-print( tableau.count(5) ) # Compte le nombre de "5" (on peut faire reverse, remove, clear, append = ajout d'élément, ...)
-print( tableau.count(10) ) # Compte le nombre de "10"
+print( tableau.count(5) )                               # Compte le nombre de "5" (on peut faire reverse, remove, clear, append = ajout d'élément, ...)
+print( tableau.count(10) )                              # Compte le nombre de "10"
 
 tableau.append("suite")
 print(tableau)
@@ -24,10 +24,10 @@ print(tableau)
 # Concatainer des listes
 l1 = [1,2,3,4]
 l2 = [5,6,7,8]
-l1.extend(l2)
+l1.extend(l2)                                 # concatainer des listes 
 print( l1 )
 
-# Dupliquer une liste == l1 et l2 seront la même chose (on modifie l1 et l2 en même temps)
+# Dupliquer une liste == l1 et l2 seront les mêmes (on modifie l1 et l2 en même temps)
 l1 = [1,2,3]
 l2 = l1
 l1.extend([4,5,6])
@@ -50,6 +50,8 @@ print( tableau )
 tableau = [0,1,2,3,4,5]
 print(tableau[-2])
 print(tableau[1:3])
+tableau.append("hello")
+tableau.insert(2, "salut")
 
 
 tableau = ["Bonjour", "salut", "aurevoir"]
