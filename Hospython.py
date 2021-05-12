@@ -6,11 +6,11 @@ if BeginChoice==5:
 if beginChoice==1:
     Enigma()
 if beginChoice==2:
-    print(
+    print()
 if beginChoice==3:
     print("")
 beginTime = 90 
-BeginPV= 4
+beginPV= 4
 
 
 def Enigma(): 
@@ -30,7 +30,7 @@ def Enigma():
     i=1
     playerChoice = int(input("Donne ton choix numéro " + str(i) + " : "))
     while i < 5 and playerChoice != enigmaChoice: 
-        if(playerChoice < enig maChoice):
+        if(playerChoice < enigmaChoice):
             # numberSmall = playerChoice
             numberTry -= 1
             playerChoice = int(input("plus haut! il te reste " + str(numberTry) + " choix, quel chiffre choisis tu ?:"))
