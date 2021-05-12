@@ -5,8 +5,14 @@ input("Hé qu'est ce que tu fais la?! Tu as osé rentrer dans MON couloir! Pour 
 Attack=2
 Defense=1
 Recharge=3
-BeginPV=4
+beginPV=4
+playerChoice= int(input(""))
+monsterChoice= randint(Attack, Defense, Recharge)
+
 
 i=0
-while "go"==input:
-    input("Vite")
+while 1 or 2 or 3==input:
+    input("Que choisis tu maintenant? ")
+    i+=1
+        
+        
