@@ -44,15 +44,17 @@ def Enigma():
 
 
 
-if beginChoice==5:
-    print("Vous n'avez pas le courage de combattre le virus")
-
+    
 if beginChoice==1:
     Enigma()
 if beginChoice==2:
     print()
 if beginChoice==3:
     print("")
+else:
+	print("Vous n'avez pas le courage de combattre le virus")
+	print("Vous etes une poule mouillé ")
+
 beginTime = 90 
 beginPV= 4
 
