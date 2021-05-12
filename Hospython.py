@@ -6,11 +6,11 @@ if BeginChoice==5:
 if beginChoice==1:
     Enigma()
 if beginChoice==2:
-    print(
+    print()
 if beginChoice==3:
     print("")
 beginTime = 90 
-BeginPV= 4
+beginPV= 4
 
 
 def Enigma(): 
