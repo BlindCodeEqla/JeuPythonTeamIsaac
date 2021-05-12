@@ -1,7 +1,7 @@
 from random import *
 
 
-beginChoice = int(input("AH-AH DOMMAGE POUR TOI! Tu es coincé dans l'unité infecté par le virus Covid, ta mission, si tu l'accesptes (sinon tape \"5\" pour quitter le jeu), est de sorir vivant de l'unité Covid en X minutes.Tu peux essayer de quitter l'unité en prenant 3  chemis différents, mais attention, ce ne sera pas si simple, des épreuves t'y attendent...tape \"1\"  pour aller a gauche(Enigma), \"2\" pour aller en avant(Combat) et \"3\" pour aller a droite (labyrinte) et \"0\" pour reculer"))
+beginChoice = int(input("AH-AH DOMMAGE POUR TOI! Tu es coincé dans l'unité infecté par le virus Covid, ta mission, si tu l'acceptes (sinon tape \"5\" pour quitter le jeu), est de sorir vivant de l'unité Covid en X minutes.Tu peux essayer de quitter l'unité en prenant 3  chemains différents, mais attention, ce ne sera pas si simple, des épreuves t'y attendent...tape \"1\"  pour aller a gauche(Enigma), \"2\" pour aller en avant(Combat) et \"3\" pour aller a droite (labyrinte)"))
 
 
 
