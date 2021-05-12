@@ -5,22 +5,23 @@ input("Hé qu'est ce que tu fais la?! Tu as osé rentrer dans MON couloir! Pour 
 playerRecharge= True 
 beginPV = 4
 monsterPv = 2
-monsterRegarge = True
-timeRamain = 90
+monsterRecharge = True
+timeRemain = 90
 
 
-while beginPV != 0 and monsterPV !=0 and timeRemain != 0 : 
+while beginPV != 0 and monsterPv !=0 and timeRemain != 0 : 
     playerChoice = input("Que choisis tu maintenant? ")
     if playerChoice == 1: 
         if monsterRecharge : 
             monsterChoice = randint(1, 2)
         else: 
             monsterChoice = randint(1,3)
+        print(monsterChoice)
         if monsterChoice == 1: 
             print("Vous avez tous les deux choisis de vous protéger..")
         elif monsterChoice == 2 : 
-                print("il a essayé de t'attaquer, mais tu t'es protégé... ")
-                monsterRecharge = False
+            print("il a essayé de t'attaquer, mais tu t'es protégé... ")
+            monsterRecharge = False
         else: 
             print("il ne s'est rien passé car tu te protegeais pendant qu'il se raclait la gorge")
     elif playerChoice == 3:
@@ -43,34 +44,22 @@ while beginPV != 0 and monsterPV !=0 and timeRemain != 0 :
     elif playerChoice == 2:
         if playerRecharge: 
             monsterRecharge = True
-                if monsterRecharge : 
-                    monsterchoice = randint(1, 2)
-                else: 
-                    monsterChoice = randint(1,3)
-                if monsterchoice == 1: 
-                    print("ta seringue est chargée et tu ne t'es pas fait attaqué car il a reculé...")
-                    elif(monsterchoice==2): 
-                        print("tu as manqué ton coup car l'infecté a reculé...")
-                        beginPV -=1
-                        print("vous vous êtes touché tous les deux  ")
-                        beginPV -=1
-                        monsterPV -=1
-                        print("il vous reste " + str(beginPV) + "points de vie et il reste" + str(monsterPV) + " points de vie à l'infecté " )
-                    else: 
-                            print("bravo tu l'as vacciné pendant qu'il se préparait à t'attaquer ....")
-                            monsterPv -=1
-                            playerRecharge = False
+            if monsterRecharge : 
+                monsterchoice = randint(1, 2)
+            else: 
+                monsterChoice = randint(1,3)
+            if monsterchoice == 1: 
+                print("ta seringue est chargée et tu ne t'es pas fait attaqué car il a reculé...")
+            elif(monsterchoice==2): 
+                print("tu as manqué ton coup car l'infecté a reculé...")
+                beginPV -=1
+                print("vous vous êtes touché tous les deux  ")
+                beginPV -=1
+                monsterPV -=1
+                print("il vous reste " + str(beginPV) + "points de vie et il reste" + str(monsterPV) + " points de vie à l'infecté " )
+            else: 
+                print("bravo tu l'as vacciné pendant qu'il se préparait à t'attaquer ....")
+                monsterPv -=1
+        playerRecharge = False
 
 
-
-
-
-
-
-
-
-
-
-
-
-def Defence (): 
