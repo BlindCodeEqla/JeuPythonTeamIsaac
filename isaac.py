@@ -16,10 +16,11 @@ playerChoice = int(input("Donne ton choix numéro " + str(i) + " : "))
 while i < 5 and playerChoice != enigmaChoice: 
     if(playerChoice < enigmaChoice):
         # numberSmall = playerChoice
-        remainChoice = numberTry - i 
-        playerChoice = int(input("plus haut! il te reste " + str(remainChoice) + " choix, quel chiffre choisis tu ?:"))
+        numberTry -= 1
+        playerChoice = int(input("plus haut! il te reste " + str(numberTry) + " choix, quel chiffre choisis tu ?:"))
     elif playerChoice > enigmaChoice: 
-        playerChoice = int(input("plus bas! il te reste " + str(remainChoice) + " choix, quel chiffre choisis tu ?:"))
+        numberTry -= 1
+        playerChoice = int(input("plus bas! il te reste " + str(numberTry) + " choix, quel chiffre choisis tu ?:"))
     i +=1
 else: 
     if playerChoice == enigmaChoice: 
