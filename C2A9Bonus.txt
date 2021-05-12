@@ -34,7 +34,7 @@ Le jeu s'arrete si le joueur n'arriv pas a en sortir ouqu'il meurt ou si le temp
 
 le joueur doit prendre des décisions sur le chemin qu'i veut prendre:
 
--si il va tout droit (z) il tombe sur une épreuve, ex: une personne infecté, il doit se battre et gagner pour continuer son chemin.
+-si il va tout droit (3) il tombe sur une épreuve, ex: une personne infecté, il doit se battre et gagner pour continuer son chemin.
 	Epreuve combat (0)
 		joueur: 1. protégé=masque
 				2. attaquer=vaccin
@@ -45,13 +45,13 @@ le joueur doit prendre des décisions sur le chemin qu'i veut prendre:
 				recharge= inspire
 
 
--si il va a gauche (q) il doit répondre a une enigme, si ll ne répond pas assez vite il meurt (de toute facon ce chemin est un cul de sac et il devra faire demi tour pour choisir soit tout droit soit droite):
+-si il va a gauche (1) il doit répondre a une enigme, si ll ne répond pas assez vite il meurt (de toute facon ce chemin est un cul de sac et il devra faire demi tour pour choisir soit tout droit soit droite):
 	trouver le bon chiffre en 5 tests, a chaque test on précise l'interval entre le chiffre donné par le jour et le nombre de l'ordinateur.
 
 	Si il réussis a trouver le nombre, il gagne du temps pour sortir du donjon 
 	Si il ne trouve pas le chiffre, il perd du temps poru sortir du donjon
 
--si il va a droite (d) il sort sans souvis.
+-si il va a droite (2) il sort sans souvis.
 	s'orienté dans le labyrinthe avec les touches (q=gauche, d=droite, z=en avant, s=reculer)
 	ex de chemin, gauche=>droite=>tout droit
 
@@ -134,6 +134,9 @@ Enigme:
 			point situation
 		3-3: Vous rechargiez tous les 2 vos armes de destructions massives
 			point situation
+
+		Si on appuye sur 2 sans avoir d'abord appuyer sur 3 alors:
+		-Tu as essayer de vacciner avec une seringue vide.
 
 		Victoire: Bravo!! Tu as guérris l'infecté, il va te montrer la sortie.
 		Mort: Tu as été en contacte trop longtemps avec quelqu'un d'infecté.. tu vas donc sortir de l'hopital, les pieds devant!
