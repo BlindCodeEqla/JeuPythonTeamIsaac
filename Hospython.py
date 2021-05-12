@@ -87,3 +87,6 @@ def Enigma():
             print("OOOOOh dommage, tu vas devoir quitter ma chambre. \n Comme récompense, je t'offre" + str(addingTime) + " secondes ou pv. \n courage pour trouver ton chemin....")
         else:
             print("Super tu as été infecté, On va partager ma chambre pour la vie ") 
+
+
+
