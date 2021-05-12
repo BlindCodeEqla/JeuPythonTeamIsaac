@@ -21,10 +21,19 @@ playerChoice = input("Donne ton choix numéro " + str(numberTry) + " : ")
 while i < 5 and playerChoice != enigmaChoice: 
     if(playerChoice < enigmaChoice):
         # numberSmall = playerChoice
+<<<<<<< HEAD
         remainChoice = numberChoice - i 
         playerChoice = input("plus haut! il te reste " + str(ramainChoice) + " choix, quel chiffre choisis tu ?:")
     elif playerChoice > enigmaChoice: 
         playerChoice = input("plus bas! il te reste " + str(ramainChoice) + " choix, quel chiffre choisis tu ?:")
+=======
+        numberTry -= 1
+        playerChoice = int(input("plus haut! il te reste " + str(numberTry) + " choix, quel chiffre choisis tu ?:"))
+    elif playerChoice > enigmaChoice: 
+        numberTry -= 1
+        playerChoice = int(input("plus bas! il te reste " + str(numberTry) + " choix, quel chiffre choisis tu ?:"))
+    i +=1
+>>>>>>> 81c537f672e568b86d7ee2bb81db5c1cae4024fd
 else: 
     if playerChoice == enigmaChoice: 
         print("OOOOOh dommage, tu vas devoir quitter ma chambre. \n Comme récompense, je t'offre" + str(addingTime) + " secondes ou pv. \n courage pour trouver ton chemin....")
