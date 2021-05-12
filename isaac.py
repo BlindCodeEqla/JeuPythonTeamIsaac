@@ -1,5 +1,6 @@
 from random import *
 numberTry=5
+tryMax = numberTry
 numberSmall=0
 numberBig=100
 enigmaChoice = randint(numberSmall, numberBig)
@@ -13,7 +14,7 @@ print("GENIAL! De la compagnie, je n'ai vu personne depuis que je susi malade (1
 
 i=1
 playerChoice = int(input("Donne ton choix numéro " + str(i) + " : "))
-while i < 5 and playerChoice != enigmaChoice: 
+while i < tryMax and playerChoice != enigmaChoice: 
     if(playerChoice < enigmaChoice):
         # numberSmall = playerChoice
         numberTry -= 1
