@@ -4,22 +4,22 @@ import winsound
 from winsound import *
 import threading
 import time
-maxTime = 1000
+import sys
 
 
 
 def Combat():
-    global maxTime 
+    global remainTime 
     input("Hé qu'est ce que tu fais la?! Tu as osé rentrer dans MON couloir! Pour la peine, je vais te contaminer!!!!! \nSi tu arrives a me battre, je te laisserai sortir, sinon tu seras piégé, comme moi et la vieille folle d'a coté aura de la compagnie et arrêtera enfin de me poser la même énigme du matin au soir!\"\nHAUT PARLEUR: Combat dans le couloir de sortie!!!!:\nLes règles sont les suivantes:\n-Tu as 1 seringue chargé de vaccin pour guérrire ton attaqunt. (tape 2) \nSi tu le touches 2 fois, il sera guérrit et te laissera partir! \n-Pour te protégé de ses attaques, tu dois mettre ton bras devant tes voix respiratoires (tape 1) \n- Tu peux également recharger ta seringue (tape 3) \n Tape \"go\" pour commencer: ")
     beginTime = time.time()
     playerRecharge= True 
     beginPv = 4
     monsterPv = 2
     monsterRecharge = True
-    timeRemain = 90
+    remainTime = 90
 
 
-    while beginPv != 0 and monsterPv !=0 and timeRemain != 0 : 
+    while beginPv != 0 and monsterPv !=0 and remainTime != 0 : 
         PlaySound("clock", SND_ASYNC | SND_LOOP | SND_FILENAME)
 
         playerChoice = int(input("Que choisis tu maintenant? "))
@@ -77,9 +77,12 @@ def Combat():
             continue
         pastTime = time.time() - beginTime
         pastTime = floor(pastTime)
-        remainTime = maxTime - pastTime
+        remainTime -= pastTime
         Result(beginPv, monsterPv)
         print("Temps restant : ", remainTime)
+        if(remainTime <= 0):
+            input("Game Over... Vous êtes trop longtemps exposé au virus...")
+            return
 
 
 def Result(_beginPv, _monsterPv):
