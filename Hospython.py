@@ -1,9 +1,17 @@
+from math import floor
 from random import *
+import winsound
+from winsound import *
+import threading
+import time
+maxTime = 1000
+
 
 
 def Combat():
+    global maxTime 
     input("Hé qu'est ce que tu fais la?! Tu as osé rentrer dans MON couloir! Pour la peine, je vais te contaminer!!!!! \nSi tu arrives a me battre, je te laisserai sortir, sinon tu seras piégé, comme moi et la vieille folle d'a coté aura de la compagnie et arrêtera enfin de me poser la même énigme du matin au soir!\"\nHAUT PARLEUR: Combat dans le couloir de sortie!!!!:\nLes règles sont les suivantes:\n-Tu as 1 seringue chargé de vaccin pour guérrire ton attaqunt. (tape 2) \nSi tu le touches 2 fois, il sera guérrit et te laissera partir! \n-Pour te protégé de ses attaques, tu dois mettre ton bras devant tes voix respiratoires (tape 1) \n- Tu peux également recharger ta seringue (tape 3) \n Tape \"go\" pour commencer: ")
-
+    beginTime = time.time()
     playerRecharge= True 
     beginPv = 4
     monsterPv = 2
@@ -12,6 +20,8 @@ def Combat():
 
 
     while beginPv != 0 and monsterPv !=0 and timeRemain != 0 : 
+        PlaySound("clock", SND_ASYNC | SND_LOOP | SND_FILENAME)
+
         playerChoice = int(input("Que choisis tu maintenant? "))
         if monsterRecharge : 
             monsterChoice = randint(1, 2)
@@ -28,15 +38,16 @@ def Combat():
                 print("il ne sest rien passé car tu te protegeais pendant qu'il se raclait la gorge")
                 monsterRecharge = True
         elif playerChoice == 3:
-            if monsterChoice == 1: 
-                print("ta seringue est chargée et tu ne t'es pas fait attaquer car il a reculé...")
-            elif(monsterChoice==2): 
-                print("mince tu t'es fait cracher dessus pendant que tu rechargeais ta seringue... ")
-                beginPv -=1
-                monsterRecharge = False
-            else: 
-                monsterRecharge = True
-                print("vous rechargé tous les deux vos armes de destruction massive ....")
+                playerRecharge = True
+                if monsterChoice == 1: 
+                    print("ta seringue est chargée et tu ne t'es pas fait attaquer car il a reculé...")
+                elif(monsterChoice==2): 
+                    print("mince tu t'es fait cracher dessus pendant que tu rechargeais ta seringue... ")
+                    beginPv -=1
+                    monsterRecharge = False
+                else: 
+                    monsterRecharge = True
+                    print("vous rechargé tous les deux vos armes de destruction massive ....")
         elif playerChoice == 2:
             if playerRecharge: 
                 playerRecharge= False
@@ -61,8 +72,14 @@ def Combat():
                 else: 
                     print("si ta séringue était chargé, tu aurais pu le vacciner pendant qu'il se préparait à t'attaquer ....")
                     monsterRecharge = True
+        else:
+            print("Veuillez choisir un chiffre comprie entre 1 et 3")
+            continue
+        pastTime = time.time() - beginTime
+        pastTime = floor(pastTime)
+        remainTime = maxTime - pastTime
         Result(beginPv, monsterPv)
-
+        print("Temps restant : ", remainTime)
 
 
 def Result(_beginPv, _monsterPv):
@@ -118,6 +135,7 @@ def Hopython():
     else:
         print("Vous n'avez pas le courage de combattre le virus")
         print("Vous etes une poule mouillé ")
+
 
 
 # PARTIE EXECUTION DU PROGRAMME
