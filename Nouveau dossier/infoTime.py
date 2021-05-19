@@ -1,3 +1,4 @@
+from math import floor
 import time 
 
 time.sleep(5)
@@ -11,3 +12,4 @@ print(time.localtime())                      #donne la structure du temps actuel
 mktime()                                    #permet de générer le stamptime à partir du localtimme
 
 my_time = time.strftime("%A")
+

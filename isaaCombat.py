@@ -29,6 +29,7 @@ def Combat():
                 print("il ne sest rien passé car tu te protegeais pendant qu'il se raclait la gorge")
                 monsterRecharge = True
         elif playerChoice == 3:
+                playerRecharge = True
             if monsterChoice == 1: 
                 print("ta seringue est chargée et tu ne t'es pas fait attaquer car il a reculé...")
             elif(monsterChoice==2): 
