@@ -1,4 +1,7 @@
-import enigma, combat, labyrinthe, timer, timerSound
+
+from timer import * 
+from timerSound import *
+
 from math import floor
 from random import *
 import winsound
@@ -9,20 +12,14 @@ import sys
 import wave
 import threading
 
-def Combat():
-    global remainTime 
-    input("Hé qu'est ce que tu fais la?! Tu as osé rentrer dans MON couloir! Pour la peine, je vais te contaminer!!!!! \nSi tu arrives a me battre, je te laisserai sortir, sinon tu seras piégé, comme moi et la vieille folle d'a coté aura de la compagnie et arrêtera enfin de me poser la même énigme du matin au soir!\"\nHAUT PARLEUR: Combat dans le couloir de sortie!!!!:\nLes règles sont les suivantes:\n-Tu as 1 seringue chargé de vaccin pour guérrire ton attaqunt. (tape 2) \nSi tu le touches 2 fois, il sera guérrit et te laissera partir! \n-Pour te protégé de ses attaques, tu dois mettre ton bras devant tes voix respiratoires (tape 1) \n- Tu peux également recharger ta seringue (tape 3) \n Tape \"go\" pour commencer: ")
-    beginTime = time.time()
+def Combat(_timer, _beginTime):
     playerRecharge= True 
     beginPv = 4
     monsterPv = 2
     monsterRecharge = True
-    remainTime = 90
+    
 
-
-    while beginPv != 0 and monsterPv !=0 and remainTime != 0 : 
-        # PlaySound("clock", SND_ASYNC | SND_LOOP | SND_FILENAME)
-
+    while beginPv > 0 and monsterPv > 0 and Timer(_timer, _beginTime) > 0 : 
         playerChoice = int(input("Que choisis tu maintenant? "))
         if monsterRecharge : 
             monsterChoice = randint(1, 2)
@@ -88,14 +85,12 @@ def Combat():
         else:
             print("Veuillez choisir un chiffre comprie entre 1 et 3")
             continue
-        pastTime = time.time() - beginTime
-        pastTime = floor(pastTime)
-        remainTime -= pastTime
         Result(beginPv, monsterPv)
-        print("Temps restant : ", remainTime)
-        if(remainTime <= 0):
-            input("Game Over... Vous êtes trop longtemps exposé au virus...")
-            return
+        print("Temps restant : ", Timer(_timer, _beginTime), " seconde(s).")
+        if(Timer(_timer, _beginTime) <= 0):
+            print("Game Over... Vous êtes trop longtemps exposé au virus...")
+            return Timer(_timer, _beginTime)
+    return Timer(_timer, _beginTime)
 
 
 

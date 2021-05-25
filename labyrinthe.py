@@ -1,4 +1,6 @@
-import enigma, combat, labyrinthe, timer, timerSound
+from timer import * 
+from timerSound import *
+
 from math import floor
 from random import *
 import winsound

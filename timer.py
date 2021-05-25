@@ -1,4 +1,4 @@
-import enigma, combat, labyrinthe, timer, timerSound
+
 from math import floor
 from random import *
 import winsound
@@ -9,7 +9,6 @@ import sys
 import wave
 import threading
 
-
-def Timer(_timer, _begninTime):
-    _timer = _timer - (time.time() - _beginTime) 
+def Timer(_timer, _beginTime):
+    _timer -= floor(time.time() - _beginTime) 
     return _timer
